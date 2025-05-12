@@ -1,0 +1,43 @@
+.white-toggler {
+  filter: brightness(0) invert(1);
+}
+.nav-link {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #da8e3c !important;
+}
+
+.nav-link.router-link-active,
+.nav-link.text-warning {
+  color: #da8e3c !important;
+  font-weight: 600;
+}
+
+/* Línea animada inferior */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.router-link-active::after {
+  background-color: #da8e3c;
+}
+.dropdown-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #da8e3c !important;
+  color: white;
+}

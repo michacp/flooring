@@ -1,0 +1,33 @@
+<div id="photoCarousel" class="carousel slide vh-100" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-inner">
+    <div
+      class="carousel-item h-100 position-relative"
+      *ngFor="let photo of photos; let i = index"
+      [ngClass]="{ active: i === 0 }"
+    >
+      <!-- Overlay -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-color: rgba(0, 0, 0, 0.6); z-index: 2;"
+      ></div>
+
+      <!-- Imagen -->
+      <img
+        [src]="photo.source"
+        class="d-block w-100 h-100 position-relative"
+        [alt]="photo.name || 'Facebook photo'"
+        style="object-fit: cover; z-index: 1;"
+      />
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg fixed-top"
+     [ngClass]="{ 'bg-white shadow-sm': scrolled, 'bg-transparent': !scrolled }">
+  <div class="container-fluid px-4 d-flex align-items-center justify-content-between flex-nowrap">
+
+    <!-- Logo y Nombre -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand me-2 ps-4" routerLink="/">
+        <img src="images/logo.png" alt="Logo" height="40">
+      </a>
+      <span class="fw-bold d-none d-lg-inline"
+            [ngClass]="{ 'text-white': !scrolled, 'text-dark': scrolled }">
+        Discount Flooring
+      </span>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navMenu" aria-controls="navMenu"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" [ngClass]="{ 'white-toggler': !scrolled }"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item" *ngFor="let link of navLinks">
+          <a class="nav-link text-uppercase fw-medium"
+             [routerLink]="link.path"
+             routerLinkActive="text-warning"
+             [routerLinkActiveOptions]="{ exact: link.exact }"
+             [ngClass]="{ 'text-white': !scrolled, 'text-dark': scrolled }">
+            {{ link.label | translate }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Selector de idioma -->
+    <div class="ms-3">
+      <div class="dropdown">
+        <button class="btn btn-sm dropdown-toggle border-0 border-bottom border-warning fw-medium bg-transparent"
+                [ngClass]="{ 'text-white': !scrolled, 'text-dark': scrolled }"
+                type="button" data-bs-toggle="dropdown">
+          <img [src]="'https://flagcdn.com/16x12/' + (selectedLang === 'en' ? 'us' : selectedLang) + '.png'"
+               [srcset]="'https://flagcdn.com/32x24/' + (selectedLang === 'en' ? 'us' : selectedLang) + '.png 2x'"
+               width="16" height="12" class="me-2" alt="selectedLang">
+          {{ selectedLang.toUpperCase() }}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li>
+            <a class="dropdown-item d-flex align-items-center" (click)="changeLang('es')">
+              <img src="https://flagcdn.com/16x12/es.png" width="16" height="12" alt="España" class="me-2">
+              ES
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item d-flex align-items-center" (click)="changeLang('en')">
+              <img src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="English" class="me-2">
+              EN
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</nav>
