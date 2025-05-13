@@ -41,3 +41,9 @@
   background-color: #da8e3c !important;
   color: white;
 }
+@media (min-width: 1200px) {
+  .navbar-padding-xl {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
