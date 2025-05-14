@@ -1,9 +1,29 @@
 {
-    "NAVBAR": {
-      "HOME": "Home",
-      "ABOUT": "About",
-      "SERVICES": "Services",
-      "CONTACT": "Contact"
+  "COMPANY": {
+    "NAME": "Discount Flooring"
+  },
+  "NAVBAR": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SERVICES": "Services",
+    "CONTACT": "Contact"
+  },
+  "CAROUSEL": {
+    "SLIDE_1": {
+      "TITLE": "Discount Flooring",
+      "DESCRIPTION": "We are experts in residential and commercial flooring installation."
+    },
+    "SLIDE_2": {
+      "TITLE": "Guaranteed quality",
+      "DESCRIPTION": "We deliver long-lasting finishes using top-quality materials."
+    },
+    "SLIDE_3": {
+      "TITLE": "Certified professionals",
+      "DESCRIPTION": "Our team has extensive experience in the flooring industry."
+    },
+    "SLIDE_4": {
+      "TITLE": "Your project in good hands",
+      "DESCRIPTION": "Trust us to transform your spaces with style."
     }
   }
-  
+}

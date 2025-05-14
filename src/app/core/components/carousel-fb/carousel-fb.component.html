@@ -1,33 +1,73 @@
 <div id="photoCarousel" class="carousel slide vh-100" data-bs-ride="carousel" data-bs-interval="5000">
-  <div class="carousel-inner">
-    <div
-      class="carousel-item h-100 position-relative"
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button
       *ngFor="let photo of photos; let i = index"
-      [ngClass]="{ active: i === 0 }"
-    >
-      <!-- Overlay -->
-      <div
-        class="position-absolute top-0 start-0 w-100 h-100"
-        style="background-color: rgba(0, 0, 0, 0.6); z-index: 2;"
-      ></div>
-
-      <!-- Imagen -->
-      <img
-        [src]="photo.source"
-        class="d-block w-100 h-100 position-relative"
-        [alt]="photo.name || 'Facebook photo'"
-        style="object-fit: cover; z-index: 1;"
-      />
-    </div>
+      type="button"
+      data-bs-target="#photoCarousel"
+      [attr.data-bs-slide-to]="i"
+      [class.active]="i === 0"
+      [attr.aria-current]="i === 0 ? 'true' : null"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+      class="bg-theme"
+    ></button>
   </div>
 
+  <!-- Slides -->
+<div class="carousel-inner h-100">
+  <div
+    class="carousel-item h-100 position-relative text-white"
+    *ngFor="let photo of photos; let i = index"
+    [ngClass]="{ active: i === 0 }"
+  >
+    <!-- Overlay -->
+    <div
+      class="position-absolute top-0 start-0 w-100 h-100"
+      style="background-color: rgba(0, 0, 0, 0.6); z-index: 1;"
+    ></div>
+
+    <!-- Imagen -->
+    <img
+      [src]="photo.source"
+      class="d-block w-100 h-100 position-relative"
+      [alt]="photo.name || 'Facebook photo'"
+      style="object-fit: cover; z-index: 0;"
+    />
+
+    <!-- Texto traducido -->
+    <div
+      class="position-absolute top-50 start-50 translate-middle text-center px-3"
+      style="z-index: 2;"
+    >
+      <h1 class="fw-bold display-5" style="color: #da8e3c;">
+        {{ photo.titleKey| translate }}
+      </h1> 
+      <p class="lead">
+        {{ photo.descriptionKey | translate }}
+      </p>
+    </div>
+  </div>
+</div>
+
   <!-- Controles -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-    <span class="visually-hidden">Previous</span>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#photoCarousel"
+    data-bs-slide="prev"
+    style="z-index: 10;"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(60%) sepia(100%) saturate(400%) hue-rotate(10deg) brightness(95%) contrast(85%);"></span>
+    <span class="visually-hidden">Anterior</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-    <span class="visually-hidden">Next</span>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#photoCarousel"
+    data-bs-slide="next"
+    style="z-index: 10;"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(60%) sepia(100%) saturate(400%) hue-rotate(10deg) brightness(95%) contrast(85%);"></span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>

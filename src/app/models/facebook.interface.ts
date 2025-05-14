@@ -5,6 +5,8 @@ export interface ListfacebookphotosI {
     name: any;
     from: PerfilI;
     likes: LikesI;
+    titleKey: string;
+    descriptionKey: string;
 }
 export interface PerfilI {
     id: any; 

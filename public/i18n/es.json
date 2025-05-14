@@ -1,8 +1,29 @@
 {
-    "NAVBAR": {
-      "HOME": "Inicio",
-      "ABOUT": "Nosotros",
-      "SERVICES": "Servicios",
-      "CONTACT": "Contacto"
+  "COMPANY": {
+    "NAME": "Discount Flooring"
+  },
+  "NAVBAR": {
+    "HOME": "Inicio",
+    "ABOUT": "Nosotros",
+    "SERVICES": "Servicios",
+    "CONTACT": "Contacto"
+  },
+  "CAROUSEL": {
+    "SLIDE_1": {
+      "TITLE": "Dicounflooring",
+      "DESCRIPTION": "Somos expertos en instalación de pisos residenciales y comerciales."
+    },
+    "SLIDE_2": {
+      "TITLE": "Calidad garantizada",
+      "DESCRIPTION": "Ofrecemos acabados duraderos con materiales de primera calidad."
+    },
+    "SLIDE_3": {
+      "TITLE": "Profesionales certificados",
+      "DESCRIPTION": "Nuestro equipo cuenta con amplia experiencia en el sector."
+    },
+    "SLIDE_4": {
+      "TITLE": "Tu proyecto en buenas manos",
+      "DESCRIPTION": "Confía en nosotros para transformar tus espacios con estilo."
     }
   }
+}
