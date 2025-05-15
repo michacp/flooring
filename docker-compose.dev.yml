@@ -5,7 +5,7 @@
       dockerfile: Dockerfile.dev
     container_name: flooring1-dev
     ports:
-      - "4200:4200"  # Mapea puerto local al del contenedor
+      - "4201:4201"   # Mapea puerto local al del contenedor
     volumes:
       - .:/usr/src/app               # Monta el código fuente en el contenedor
       - /usr/src/app/node_modules    # Evita sobrescribir node_modules

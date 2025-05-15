@@ -20,4 +20,5 @@ COPY . .
 EXPOSE 4200
 
 # Comando por defecto (sin HMR pero con polling para detectar cambios)
-CMD ["ng", "serve" ,"--no-hmr", "--host", "0.0.0.0", "--disable-host-check", "--poll=100"]
+# CMD ["ng", "serve" ,"--no-hmr", "--host", "0.0.0.0", "--disable-host-check", "--poll=100"]
+CMD ["ng", "serve", "--no-hmr", "--host", "0.0.0.0", "--disable-host-check", "--poll=100", "--port=4201"]
