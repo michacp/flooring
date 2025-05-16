@@ -4,60 +4,42 @@ import {
   OnInit
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SafeUrlPipe } from '../../../shared/pipes/safe-url.pipe';
-import { FacebookApiService } from '../../services/facebook-api/facebook-api.service';
-import { FacebookVideo } from '../../../models/facebook.interface';
-
+import { SafeUrlPipe } from '../../../shared/pipes/safe-url.pipe'; 
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips'; 
  declare var FB: any;
 @Component({
   selector: 'app-facebook-media',
-   imports: [CommonModule,SafeUrlPipe],
+   imports: [CommonModule,SafeUrlPipe, MatCardModule, MatChipsModule ],
   templateUrl: './facebook-media.component.html',
   styleUrl: './facebook-media.component.css'
 })
 export class FacebookMediaComponent {
-  videos: FacebookVideo[] = [];
-  fbParsed = false;
+ videos: any[] = [
+    {
+      id: '1',
+      embedLink: 'https://www.tiktok.com/@maumiaespe1829/video/7501497710160186630?is_from_webapp=1&sender_device=pc',
+      description: 'Video 1 de ejemplo'
+    },
+    {
+      id: '2',
+      embedLink: 'https://www.tiktok.com/@segundosuarez533/photo/7501158952776895775?is_from_webapp=1&sender_device=pc',
+      description: 'Video 2 de ejemplo'
+    },
+    {
+      id: '3',
+      embedLink: 'https://www.tiktok.com/@segundosuarez533/video/7501164212555746590?is_from_webapp=1&sender_device=pc',
+      description: 'Video 3 de ejemplo'
+    } 
+  ];
 
-  get videosFiltrados(): FacebookVideo[] {
-    return this.videos.filter(v => !v.error);
-  }
+  fixedText = {
+    title: 'Contenido destacado',
+    content: 'Aquí encontrarás los videos más populares de nuestra comunidad. Desliza para ver más contenido interesante y mantente actualizado con las últimas tendencias.'
+  };
+//https://discountflooring-864f8.web.app/
+  constructor() { }
 
-  constructor(private facebookApiService: FacebookApiService) {}
-
-  ngOnInit() {
-    this.facebookApiService.getReels().subscribe({
-      next: (data) => {
-        this.videos = data.data
-          .filter((video: FacebookVideo) =>
-            video.permalink_url?.includes('/reel/')
-          )
-          .map((video: FacebookVideo) => ({ ...video, error: false }));
-      }
-    });
-  }
-
-  ngAfterViewChecked() {
-    if (!this.fbParsed && typeof FB !== 'undefined') {
-      this.fbParsed = true;
-
-      FB.XFBML.parse(undefined, () => {
-        const iframes = document.querySelectorAll('.fb-video iframe');
-
-        iframes.forEach((iframe, index) => {
-          setTimeout(() => {
-            const rect = iframe.getBoundingClientRect();
-            if (rect.height < 100) {
-              this.videos[index].error = true;
-              this.fbParsed = false; // Reparse después de ocultar
-            }
-          }, 1000);
-        });
-      });
-    }
-  }
-
-  getFacebookUrl(video: FacebookVideo): string {
-    return `https://www.facebook.com${video.permalink_url}`;
+  ngOnInit(): void {
   }
 }

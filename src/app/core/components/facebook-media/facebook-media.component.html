@@ -1,46 +1,72 @@
-<div
-  id="facebookReelCarousel"
-  class="carousel slide"
-  data-bs-ride="carousel"
-  *ngIf="videosFiltrados.length > 0"
->
-  <div class="carousel-inner">
-    <ng-container *ngFor="let video of videosFiltrados; let i = index">
-      <div
-        class="carousel-item"
-        [class.active]="i === 0"
-      >
-        <div
-          class="fb-video"
-          [attr.data-href]="getFacebookUrl(video)"
-          data-width="500"
-          data-allowfullscreen="true"
-        ></div>
+<!-- tiktok-carousel.component.html -->
+<div class="container mt-5">
+  <div class="row align-items-center">
+    <!-- Columna de texto fijo -->
+    <div class="col-md-4 mb-4 mb-md-0">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h2>{{ fixedText.title }}</h2>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ fixedText.content }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Columna del carrusel -->
+    <div class="col-md-8">
+      <div id="tiktokCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            *ngFor="let video of videos; let i = index"
+            type="button"
+            data-bs-target="#tiktokCarousel"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+            [attr.aria-label]="'Slide ' + (i + 1)"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div
+            *ngFor="let video of videos; let i = index"
+            class="carousel-item"
+            [class.active]="i === 0"
+          >
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7504879149329272106"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allowfullscreen
+              >
+              </iframe>
+            </div> 
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#tiktokCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#tiktokCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </ng-container>
+    </div>
   </div>
-
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#facebookReelCarousel"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#facebookReelCarousel"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-  </button>
-</div>
-
-<!-- fallback -->
-<div *ngIf="videosFiltrados.length === 0" class="text-center text-muted p-3">
-  No hay reels disponibles para mostrar.
 </div>
