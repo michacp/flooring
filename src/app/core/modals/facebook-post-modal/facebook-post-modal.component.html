@@ -1,0 +1,31 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <h2 mat-dialog-title>
+      {{ selectedPost?.type === 'video' ? 'Video' : 'Imagen' }}
+    </h2>
+    <button mat-icon-button mat-dialog-close aria-label="Close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-dialog-content class="dialog-content">
+    <ng-container *ngIf="selectedPost">
+      <ng-container *ngIf="selectedPost.type === 'video'; else imageContent">
+        <video
+          class="media-element"
+          controls
+          autoplay
+          muted
+          [src]="selectedPost.src"
+        ></video>
+      </ng-container>
+      <ng-template #imageContent>
+        <img
+          [src]="selectedPost.src"
+          class="media-element"
+          alt="Facebook Post"
+        />
+      </ng-template>
+    </ng-container>
+  </mat-dialog-content>
+</div>

@@ -1,25 +1,33 @@
 import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; 
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';  
 import { environment } from '../../../../environments/environment';
-
+import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
 export class FacebookApiService {
-  private http = inject(HttpClient);
+      private albumSubject = new BehaviorSubject<any>(null); // valor inicial null
+  album$ = this.albumSubject.asObservable(); // observable para componentes
   private accessToken = environment.facebook_token;
   private pageId=environment.page_Id
- getAlbumWithPhotos( ): Observable<any> {
-  //const url = `https://graph.facebook.com/v20.0/${albumId}?fields=photos.limit(4){source,name,link,from{id,name},likes.summary(true)}&access_token=${this.accessToken}`;
-  const url =  `https://graph.facebook.com/v22.0/${this.pageId}/posts?fields=message,attachments{media,subattachments},created_time&limit=4&access_token=${this.accessToken}`
-    return this.http.get(url);
+   constructor(private http: HttpClient) {}
+  // Solo se llama una vez (cuando inicia la app)
+  fetchAlbum(): Observable<any> {
+    const url = `https://graph.facebook.com/v22.0/${this.pageId}/posts?fields=message,attachments{media,subattachments},created_time&limit=4&access_token=${this.accessToken}`;
+
+    return this.http.get(url).pipe(
+      tap(data => this.albumSubject.next(data)) // actualiza el valor
+    );
   }
-   getReels( ): Observable<any> {
-   
-  const url = `https://graph.facebook.com/v22.0/${this.pageId}/video_reels?fields=id,created_time,description,media_url,permalink_url,thumbnail_url,length&limit=4&access_token=${this.accessToken}`
-    return this.http.get(url);
-  }
+  // Acceso a los datos ya cargados
+ 
+
+  //  getReels( ): Observable<any> {
+  //   //const url = `https://graph.facebook.com/v20.0/${albumId}?fields=photos.limit(4){source,name,link,from{id,name},likes.summary(true)}&access_token=${this.accessToken}`;
+  // const url = `https://graph.facebook.com/v22.0/${this.pageId}/video_reels?fields=id,created_time,description,media_url,permalink_url,thumbnail_url,length&limit=4&access_token=${this.accessToken}`
+  //   return this.http.get(url);
+  // }
 }
 
 

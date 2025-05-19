@@ -1,0 +1,36 @@
+<div style="background-color: #1A1A1A;" >
+<div class="container padding-xl-horizontal py-5" style="background-color: #1A1A1A;">
+<div class="row">
+    <!-- Sección de texto con Angular Material Card -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center min-vh-100">
+      <mat-card class="text-card mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>
+            <h2 class="m-0"
+                style="color: #FFD700; font-family: 'Playfair Display', serif;">{{ 'WELCOME_SECTION.TITLE' | translate }}
+            </h2>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="lead" style="color: #F7F1D3;">{{ 'WELCOME_SECTION.DESCRIPTION' | translate }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Sección de video TikTok -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center min-vh-100">
+      <div class="text-center">
+        <!-- Barra de puntos arriba del video -->
+        <div class="d-flex justify-content-center mb-3">
+          <div *ngFor="let video of videoIds; let i = index" class="dot"
+              [class.active]="i === currentIndex" (click)="selectVideo(i)">
+          </div>
+        </div>
+        <!-- Video TikTok -->
+        <app-tiktok-video [videoId]="currentVideoId"></app-tiktok-video>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

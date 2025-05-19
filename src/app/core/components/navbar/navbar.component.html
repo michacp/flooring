@@ -1,59 +1,65 @@
-<nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{ 'bg-dark shadow-sm': scrolled, 'bg-transparent': !scrolled }">
-  <!-- Contenedor principal con padding personalizado -->
-<div class="container-fluid d-flex align-items-center justify-content-between flex-nowrap navbar-padding-xl">
+<nav class="navbar navbar-expand-lg fixed-top"
+  [ngClass]="{ 'shadow-sm': scrolled, 'bg-transparent': !scrolled }"
+  [style.background]="scrolled ? 'rgba(14, 14, 14, 0.85)' : 'transparent'">
 
-    <!-- Logo y nombre (con margen ajustado) -->
-    <div class="d-flex align-items-center me-4"> <!-- Añadido me-4 para separar del menú -->
+  <div class="container-fluid d-flex align-items-center justify-content-between flex-nowrap navbar-padding-xl">
+
+    <!-- Logo + nombre -->
+    <div class="d-flex align-items-center me-4">
       <a class="navbar-brand me-2" routerLink="/">
         <img src="images/logo.png" alt="Logo" height="40">
       </a>
-      <span class="fw-bold d-none d-lg-inline text-white ms-2" 
-            style="font-family: 'Playfair Display', serif; letter-spacing: 1px;">
+      <span class="fw-bold d-none d-lg-inline"
+        style="color: #FFD700; font-family: 'Playfair Display', serif; letter-spacing: 1px;">
         Discount Flooring
       </span>
     </div>
 
     <!-- Botón hamburguesa -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navMenu" aria-controls="navMenu"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" [ngClass]="{ 'white-toggler': !scrolled }"></span>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" [ngClass]="{ 'white-toggler': !scrolled }"
+        style="filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(360deg) brightness(100%) contrast(100%);">
+      </span>
     </button>
 
     <!-- Menú de navegación -->
     <div class="collapse navbar-collapse justify-content-center" id="navMenu">
       <ul class="navbar-nav text-center">
         <li class="nav-item" *ngFor="let link of navLinks">
-          <a class="nav-link text-uppercase fw-medium text-white"
-             [routerLink]="link.path"
-             routerLinkActive="text-warning"
-             [routerLinkActiveOptions]="{ exact: link.exact }" >
+          <a class="nav-link text-uppercase fw-medium"
+            [routerLink]="link.path"
+            routerLinkActive="text-golden"
+            [routerLinkActiveOptions]="{ exact: link.exact }"
+            style="color: #E6F4F9;">
             {{ link.label | translate }}
           </a>
         </li>
       </ul>
     </div>
 
+  
+
     <!-- Selector de idioma -->
     <div class="ms-1"> <!-- Reducido a 4px -->
       <div class="dropdown">
-        <button class="btn btn-sm dropdown-toggle border-0 border-bottom border-warning fw-medium bg-transparent text-white"
-                 
-                type="button" data-bs-toggle="dropdown">
+        <button
+          class="btn btn-sm dropdown-toggle border-0 border-bottom fw-medium bg-transparent text-white"
+          type="button" data-bs-toggle="dropdown" style="border-color: #FFD700 !important;">
           <img [src]="'https://flagcdn.com/16x12/' + (selectedLang === 'en' ? 'us' : selectedLang) + '.png'"
-               [srcset]="'https://flagcdn.com/32x24/' + (selectedLang === 'en' ? 'us' : selectedLang) + '.png 2x'"
-               width="16" height="12" class="me-2" alt="selectedLang">
+            [srcset]="'https://flagcdn.com/32x24/' + (selectedLang === 'en' ? 'us' : selectedLang) + '.png 2x'"
+            width="16" height="12" class="me-2" alt="selectedLang">
           {{ selectedLang.toUpperCase() }}
         </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
+        <ul class="dropdown-menu dropdown-menu-lang">
           <li>
-            <a class="dropdown-item d-flex align-items-center" (click)="changeLang('es')">
+            <a class="dropdown-item dropdown-item-lang d-flex align-items-center" (click)="changeLang('es')">
               <img src="https://flagcdn.com/16x12/es.png" width="16" height="12" alt="España" class="me-2">
               ES
             </a>
           </li>
           <li>
-            <a class="dropdown-item d-flex align-items-center" (click)="changeLang('en')">
+            <a class="dropdown-item dropdown-item-lang d-flex align-items-center" (click)="changeLang('en')">
               <img src="https://flagcdn.com/16x12/us.png" width="16" height="12" alt="English" class="me-2">
               EN
             </a>

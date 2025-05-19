@@ -1,0 +1,23 @@
+<section class="bg-dark text-white py-5" style="background-color: #1A1A1A;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #FFD700;">
+      {{ 'EXPERIENCE.TITLE' | translate }}
+    </h2>
+
+    <p class="text-center text-secondary mb-5 px-md-5" style="max-width: 900px; margin: 0 auto;">
+      {{ 'EXPERIENCE.DESCRIPTION' | translate }}
+    </p>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let exp of experienceCards">
+        <mat-card class="experience-card h-100 text-center p-3">
+          <img mat-card-image [src]="exp.image" alt="Experience image" class="experience-image mb-3">
+          <mat-card-title class="text-white">{{ exp.title | translate }}</mat-card-title>
+          <mat-card-content>
+            <p class="text-secondary">{{ exp.description | translate }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

@@ -25,5 +25,46 @@
       "TITLE": "Your project in good hands",
       "DESCRIPTION": "Trust us to transform your spaces with style."
     }
+  },
+    "WELCOME_SECTION": {
+    "TITLE": "Welcome to Discount Flooring",
+    "DESCRIPTION": "At Discount Flooring, we specialize in the professional installation of all types of flooring, including hardwood, tile, carpet, vinyl, and more. We provide customized solutions for homes and businesses, always ensuring quality, efficiency, and outstanding service. Trust us to transform your spaces with style and durability."
+  },
+ "SERVICES": {
+    "TITLE": "Our Services",
+    "FLOORING": {
+      "TITLE": "Floor Installation",
+      "DESCRIPTION": "We offer professional installation of all types of flooring: wood, vinyl, ceramic and more."
+    },
+    "CARPET": {
+      "TITLE": "Carpeting",
+      "DESCRIPTION": "Expert carpet installation for homes and offices with flawless results."
+    },
+    "REPAIR": {
+      "TITLE": "Repair & Maintenance",
+      "DESCRIPTION": "We repair and maintain existing floors to make them look like new."
+    }
+  },
+  "EXPERIENCE": {
+  "TITLE": "Our Experience",
+  "DESCRIPTION": "At Discount Flooring, we have years of experience installing all types of flooring—from elegant hardwood to durable tile and cozy carpet. Our team is committed to excellence, ensuring high-quality finishes and complete customer satisfaction on every project. We work with premium materials and modern technologies to deliver long-lasting, visually stunning results.",
+  "CARD1": {
+    "TITLE": "Professional Installation",
+    "DESCRIPTION": "Our team of experts installs flooring with precision and efficiency, ensuring a flawless finish."
+  },
+  "CARD2": {
+    "TITLE": "Personalized Advice",
+    "DESCRIPTION": "We help you choose the ideal floor for your space, considering style, durability, and budget."
+  },
+  "CARD3": {
+    "TITLE": "High-Quality Materials",
+    "DESCRIPTION": "We only work with top suppliers to ensure durable floors with a superior finish."
   }
+},
+"FACEBOOK_GALLERY": {
+  "TITLE": "Latest Facebook Posts",
+  "LOAD_MORE": "Load more posts",
+  "VIEW_ON_FACEBOOK": "View on Facebook"
+}
+
 }

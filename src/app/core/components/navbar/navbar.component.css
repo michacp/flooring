@@ -7,12 +7,12 @@
 }
 
 .nav-link:hover {
-  color: #da8e3c !important;
+  color: #E6C200!important;
 }
 
 .nav-link.router-link-active,
 .nav-link.text-warning {
-  color: #da8e3c !important;
+  color: 	#FFD700!important;
   font-weight: 600;
 }
 
@@ -30,7 +30,7 @@
 
 .nav-link:hover::after,
 .nav-link.router-link-active::after {
-  background-color: #da8e3c;
+  background-color: #E6C200 ;
 }
 .dropdown-item {
   cursor: pointer;
@@ -38,12 +38,42 @@
 }
 
 .dropdown-item:hover {
-  background-color: #da8e3c !important;
+  background-color: #E6C200 !important;
   color: white;
 }
+/* Añade esto a tu archivo CSS */
+.dropdown-menu-lang {
+  min-width: 100px !important;
+  width: auto !important;
+  background-color: #1f1f1f !important;         /* Fondo oscuro elegante */
+  border: 1px solid #FFD700 !important;         /* Borde amarillo como acento */
+  border-radius: 4px !important;
+  padding: 0.25rem 0 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-item-lang {
+  color: #FFFFFF !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9rem !important;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item-lang:hover {
+  background-color: #FFD700 !important;         /* Amarillo en hover */
+  color: #000000 !important;                    /* Texto oscuro para contraste */
+}
+
+.dropdown-item-lang:active {
+  background-color: #b38600 !important;         /* Amarillo más oscuro en active */
+  color: #ffffff !important;
+}
+
 @media (min-width: 1200px) {
   .navbar-padding-xl {
     padding-left: 12rem;
     padding-right: 12rem;
   }
 }
+
+ 

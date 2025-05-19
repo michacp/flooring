@@ -1,0 +1,29 @@
+<section class="bg-dark text-white py-5" style="background-color: #1A1A1A;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: #FFD700;">{{ 'SERVICES.TITLE' | translate }}</h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let service of services">
+        <mat-card class="service-card h-100 text-center p-3 d-flex flex-column align-items-center">
+          <mat-card-header class="d-flex justify-content-center">
+            <mat-icon style="font-size: 50px;  width: 50px; height: 50px; color: #FFD700;">{{ service.icon }}</mat-icon>
+
+          </mat-card-header>
+
+          <!-- Imagen con tamaño fijo -->
+          <img
+            [src]="service.image"
+            alt="{{ service.title }}"
+            class="my-3"
+            style="width: 340px; height: 340px; object-fit: cover; border-radius: 8px;"
+          />
+ 
+          <mat-card-title class="text-white">{{ service.title | translate }}</mat-card-title>
+          <mat-card-content>
+            <p class="text-secondary">{{ service.description | translate }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>

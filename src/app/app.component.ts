@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./core/components/navbar/navbar.component";
-import { CarouselFbComponent } from './core/components/carousel-fb/carousel-fb.component';
-import { FacebookMediaComponent } from "./core/components/facebook-media/facebook-media.component";
+import { CarouselFbComponent } from './core/components/carousel-fb/carousel-fb.component'; 
+import { TiktokCarrucelComponent } from './core/components/tiktok-carrucel/tiktok-carrucel.component';
+import { ServicesSectionComponent } from './core/components/services-section/services-section.component';
+import { ExperienceSectionComponent } from './core/components/experience-section/experience-section.component';
+import { FacebookApiService } from './core/services/facebook-api/facebook-api.service';
+import { FacebookGalleryComponent } from './core/components/facebook-gallery/facebook-gallery.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CarouselFbComponent, FacebookMediaComponent],
+  imports: [RouterOutlet, NavbarComponent, CarouselFbComponent,TiktokCarrucelComponent,ServicesSectionComponent,
+    ExperienceSectionComponent,FacebookGalleryComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'flooring1';
+  constructor(private fbService: FacebookApiService){}
+  title = 'Discount Flooring';
+    ngOnInit(): void {
+    this.fbService.fetchAlbum().subscribe();
+  }
 }

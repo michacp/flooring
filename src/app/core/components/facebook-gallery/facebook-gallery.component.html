@@ -1,0 +1,30 @@
+<section class="bg-dark text-white py-5" style="background-color: #1A1A1A;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: #FFD700;">
+      {{ 'FACEBOOK_GALLERY.TITLE' | translate }}
+    </h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let post of visiblePosts">
+        <div class="post-card" (click)="openModal(post)">
+          <ng-container [ngSwitch]="post.type">
+            <img *ngSwitchCase="'image'" [src]="post.src" alt="Facebook image" class="img-fluid post-image" />
+            <video *ngSwitchCase="'video'" class="img-fluid post-image" muted>
+              <source [src]="post.src" type="video/mp4" />
+            </video>
+          </ng-container>
+          <p class="post-date mt-2">
+            {{ post.created_time | date: 'mediumDate' }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-warning" (click)="loadMore()" *ngIf="hasMorePosts">
+        {{ 'FACEBOOK_GALLERY.LOAD_MORE' | translate }}
+      </button>
+    </div>
+  </div>
+ 
+</section>

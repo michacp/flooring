@@ -11,17 +11,25 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './carousel-fb.component.css'
 })
 export class CarouselFbComponent {
+ 
   photos: ListfacebookphotosI[] = []; 
-  constructor(private facebookApiService: FacebookApiService) {}
+  constructor(private fbService: FacebookApiService) {}
 
  ngOnInit(): void {
-  this.loadCarousel();
+ 
+      this.fbService.album$.subscribe(data => {
+      if (data) {
+        
+         this.loadCarousel(data.data);
+        
+        // Aquí ya puedes usar los datos
+      }
+    });
+ 
 }
 
-loadCarousel() { ;
-this.facebookApiService.getAlbumWithPhotos( ).subscribe({
-  next: (data) => {  
-    const photosfb = data.data;
+loadCarousel(data:any) { ; 
+    const photosfb = data;
     let images: any[] = [];
     
     // Recorrer los posts hasta obtener 4 imágenes
@@ -56,9 +64,6 @@ this.facebookApiService.getAlbumWithPhotos( ).subscribe({
       ...img,
       titleKey: `CAROUSEL.SLIDE_${index + 1}.TITLE`,
       descriptionKey: `CAROUSEL.SLIDE_${index + 1}.DESCRIPTION`
-    })); 
-  },
-  error: (err) => console.error('Error loading album:', err)
-});
+    }));  
 }
 }

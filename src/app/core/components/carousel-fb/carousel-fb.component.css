@@ -9,20 +9,17 @@
 }
 /* Estilo para indicadores personalizados */
 .carousel-indicators [data-bs-target] {
-  background-color: #da8e3c;
-  width: 12px;
-  height: 12px;
+  background-color: #999999;           /* Gris medio para los inactivos */
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  opacity: 0.7;
-  transition: all 0.3s;
+  opacity: 0.6;
+  margin: 0 6px; 
+  transition: all 0.3s ease;
 }
 
 .carousel-indicators .active {
+  background-color: #FFD700;           /* Amarillo dorado para el activo */
   opacity: 1;
+  transform: scale(1.2); 
 }
-
-/* Opcional: aumentar contraste del texto */
-.carousel-item h1,
-.carousel-item p {
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-} 

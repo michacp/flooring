@@ -1,0 +1,25 @@
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #0E0E0E;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #FFD700; 
+}
+@media (min-width: 1200px) {
+  .padding-xl-horizontal {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
+.text-card {
+  background-color: #2C2C2C; /* Un poco más claro que el fondo de la página */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}

@@ -25,5 +25,46 @@
       "TITLE": "Tu proyecto en buenas manos",
       "DESCRIPTION": "Confía en nosotros para transformar tus espacios con estilo."
     }
+  },
+  "WELCOME_SECTION": {
+    "TITLE": "Bienvenido a Discount Flooring",
+    "DESCRIPTION": "En Discount Flooring, nos especializamos en la instalación profesional de todo tipo de pisos, incluyendo madera, cerámica, alfombra, vinilo y más. Ofrecemos soluciones personalizadas para hogares y negocios, asegurando siempre calidad, eficiencia y una atención excepcional. Confía en nosotros para transformar tus espacios con estilo y durabilidad."
+  },
+  "SERVICES": {
+    "TITLE": "Nuestros Servicios",
+    "FLOORING": {
+      "TITLE": "Instalación de Pisos",
+      "DESCRIPTION": "Ofrecemos instalación profesional de todo tipo de pisos: madera, vinilo, cerámica y más."
+    },
+    "CARPET": {
+      "TITLE": "Alfombrado",
+      "DESCRIPTION": "Instalación experta de alfombras para hogares y oficinas con acabados impecables."
+    },
+    "REPAIR": {
+      "TITLE": "Reparación y Mantenimiento",
+      "DESCRIPTION": "Reparamos y damos mantenimiento a pisos existentes para que luzcan como nuevos."
+    }
+  },
+  "EXPERIENCE": {
+  "TITLE": "Nuestra Experiencia",
+  "DESCRIPTION": "En Discount Flooring, contamos con años de experiencia en la instalación de todo tipo de pisos, desde elegantes pisos de madera hasta resistentes baldosas y alfombras cómodas. Nuestro equipo está comprometido con la excelencia, asegurando acabados de alta calidad y satisfacción total del cliente en cada proyecto. Trabajamos con materiales de primera y tecnologías modernas para garantizar resultados duraderos y estéticamente impecables.",
+  "CARD1": {
+    "TITLE": "Instalación Profesional",
+    "DESCRIPTION": "Nuestro equipo de expertos se encarga de la instalación de pisos con precisión y eficiencia, garantizando un acabado perfecto."
+  },
+  "CARD2": {
+    "TITLE": "Asesoría Personalizada",
+    "DESCRIPTION": "Te ayudamos a elegir el piso ideal para tu espacio, considerando estilo, durabilidad y presupuesto."
+  },
+  "CARD3": {
+    "TITLE": "Materiales de Alta Calidad",
+    "DESCRIPTION": "Trabajamos solo con los mejores proveedores para asegurar pisos resistentes y con un acabado superior."
   }
+},
+"FACEBOOK_GALLERY": {
+  "TITLE": "Últimas publicaciones en Facebook",
+  "LOAD_MORE": "Cargar más publicaciones",
+  "VIEW_ON_FACEBOOK": "Ver en Facebook"
+} 
+
 }
