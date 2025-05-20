@@ -17,7 +17,7 @@ git push origin feature/publicacionesFB
 ### 5. Hacer el merge (fusión)
 
 #### A. Desde GitHub (recomendado en equipo)
-- Haz clic en **Merge Pull Request**. 
+- Haz clic en **Merge Pull Request**.  
 
 ### 5. Actualizar tu main local:
 git checkout main
