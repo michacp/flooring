@@ -3,7 +3,7 @@ git checkout -b feature/publicacionesFB
 
 ### 2. Hacer tus cambios y confirmar 
 git add .
-git commit -m "2 test de ramas secundarias"  
+git commit -m "Creacion de la rama"  
 
 ### 3. Subir la rama a GitHub 
 git push origin feature/publicacionesFB
