@@ -1,0 +1,28 @@
+### 1. Crear una nueva rama 
+git checkout -b feature/publicacionesFB
+
+### 2. Hacer tus cambios y confirmar 
+git add .
+git commit -m "2 test de ramas secundarias"  
+
+### 3. Subir la rama a GitHub 
+git push origin feature/publicacionesFB
+
+### 4. Crear un Pull Request en GitHub
+
+- Ve a GitHub y selecciona **Compare & pull request**.
+- Revisa los cambios y crea el PR hacia `main`.
+- Este paso permite revisión y aprobación antes de fusionar. 
+
+### 5. Hacer el merge (fusión)
+
+#### A. Desde GitHub (recomendado en equipo)
+- Haz clic en **Merge Pull Request**. 
+
+### 5. Actualizar tu main local:
+git checkout main
+git pull origin main       # Sincroniza con los cambios fusionados en GitHub
+
+### 7. Opcional: Eliminar la rama local y remota
+git branch -d feature/publicacionesFB   # Elimina local
+git push origin --delete feature/publicacionesFB  # Elimina remota
