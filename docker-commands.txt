@@ -7,7 +7,7 @@
 
 🔷 Construir y levantar contenedores (modo desarrollo)  
 🟢 docker compose -f docker-compose.dev.yml up --build
-
+git pull origin main
 🔷 Detener contenedores y eliminar redes/volúmenes temporales  
 🟢 docker compose -f docker-compose.dev.yml down
 

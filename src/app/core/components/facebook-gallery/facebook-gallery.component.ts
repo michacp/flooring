@@ -57,11 +57,14 @@ loadMore(): void {
 
  openModal(post: any) {
     this.selectedPost = post;  
-      this.dialog.open(FacebookPostModalComponent, {
-      data:  this.selectedPost ,
-      panelClass: 'custom-dialog-container',
-      maxWidth: '90vw',
-      maxHeight: '90vh'
-    });
+     
+this.dialog.open(FacebookPostModalComponent, {
+  data: { selectedPost: this.selectedPost }, 
+  panelClass: 'fullscreen-dialog',
+  hasBackdrop: true,
+  backdropClass: 'custom-backdrop',
+  disableClose: false
+});
+
     } 
 }
