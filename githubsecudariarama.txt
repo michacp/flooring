@@ -7,6 +7,7 @@ git commit -m "2 test de ramas secundarias"
 
 ### 3. Subir la rama a GitHub 
 git push origin feature/publicacionesFB
+
 ### 4. Crear un Pull Request en GitHub
 
 - Ve a GitHub y selecciona **Compare & pull request**.
