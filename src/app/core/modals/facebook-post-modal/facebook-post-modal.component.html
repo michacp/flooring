@@ -1,24 +1,14 @@
-<div class="dialog-container">
- 
-
-  <mat-dialog-content class="dialog-content">
-    <ng-container *ngIf="selectedPost">
-      <ng-container *ngIf="selectedPost.type === 'video'; else imageContent">
-        <video
-          class="media-element"
-          controls
-          autoplay
-          muted
-          [src]="selectedPost.src"
-        ></video>
-      </ng-container>
-      <ng-template #imageContent>
-        <img
-          [src]="selectedPost.src"
-          class="media-element"
-          alt="Facebook Post"
-        />
-      </ng-template>
-    </ng-container>
-  </mat-dialog-content>
+<div class="aspect-wrapper">
+  <video *ngIf="selectedPost.type === 'video'; else imageContent"
+         class="media-element"
+         controls
+         autoplay
+         muted
+         [src]="selectedPost.src">
+  </video>
+  <ng-template #imageContent>
+    <img [src]="selectedPost.src"
+         class="media-element"
+         alt="Facebook Post" />
+  </ng-template>
 </div>
