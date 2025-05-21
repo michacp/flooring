@@ -19,8 +19,8 @@ export class CarouselFbComponent {
  
       this.fbService.album$.subscribe(data => {
       if (data) {
-        
-         this.loadCarousel(data.data);
+        console.log(data)
+         this.loadCarousel(data.feed.data);
         
         // Aquí ya puedes usar los datos
       }

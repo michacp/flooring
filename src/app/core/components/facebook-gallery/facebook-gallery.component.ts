@@ -22,7 +22,7 @@ constructor(private fbService: FacebookApiService,private dialog: MatDialog) {}
 ngOnInit(): void {
   this.fbService.album$.subscribe(data => {
     if (data) {
-      this.posts = this.normalizePosts(data.data);
+      this.posts = this.normalizePosts(data.feed.data);
       this.loadCarousel();
       console.log(this.posts)
     }
