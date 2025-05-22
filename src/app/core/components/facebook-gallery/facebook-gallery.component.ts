@@ -4,6 +4,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FacebookApiService } from '../../services/facebook-api/facebook-api.service';  
 import { FacebookPostModalComponent } from '../../modals/facebook-post-modal/facebook-post-modal.component';
 import { MatDialog } from '@angular/material/dialog';
+export interface Post {
+  id: string;
+  type: 'image' | 'video'; // Puedes agregar más tipos si los usas
+  src: string;             // URL del recurso (imagen o video)
+  created_time: string | Date; // Fecha en la que se creó el post
+  message?: string;        // Texto opcional asociado al post
+  permalink_url?: string;  // URL directa al post en Facebook (opcional)
+}
 @Component({
   selector: 'app-facebook-gallery',
     imports: [CommonModule, TranslateModule,FacebookPostModalComponent ],
@@ -11,20 +19,24 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './facebook-gallery.component.css'
 })
 export class FacebookGalleryComponent {
- posts: any[] = [];
+ post: Post[] = [];
 visiblePosts: any[] = [];
 postsPerPage = 6;
 hasMorePosts = false;
 selectedPost: any = null;
-
+imgFB:String=''
+nameFB:String=''
 constructor(private fbService: FacebookApiService,private dialog: MatDialog) {}
 
 ngOnInit(): void {
   this.fbService.album$.subscribe(data => {
     if (data) {
-      this.posts = this.normalizePosts(data.feed.data);
-      this.loadCarousel();
-      console.log(this.posts)
+      
+      this.nameFB=data.name
+      this.imgFB=data.picture.data.url
+      this.post = this.normalizePosts(data.feed.data);
+      console.log(this.post)
+      this.loadCarousel(); 
     }
   });
 }
@@ -46,9 +58,9 @@ normalizePosts(data: any[]): any[] {
 
 loadCarousel(): void {
   const current = this.visiblePosts.length;
-  const next = this.posts.slice(current, current + this.postsPerPage);
+  const next = this.post.slice(current, current + this.postsPerPage);
   this.visiblePosts.push(...next);
-  this.hasMorePosts = this.visiblePosts.length < this.posts.length;
+  this.hasMorePosts = this.visiblePosts.length < this.post.length;
 }
 
 loadMore(): void {

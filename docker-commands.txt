@@ -7,7 +7,7 @@
 
 🔷 Construir y levantar contenedores (modo desarrollo)  
 🟢 docker compose -f docker-compose.dev.yml up --build
-git pull origin main
+git pull origin feature/publicacionesFB
 Actualiza la lista de ramas remotas:
 
 bash

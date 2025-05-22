@@ -5,17 +5,35 @@
     </h2>
 
     <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let post of visiblePosts">
-        <div class="post-card" (click)="openModal(post)">
+      <div class="col-12 col-sm-6 col-md-4 mb-4" *ngFor="let post of visiblePosts">
+        <div class="post-card position-relative" (click)="openModal(post)">
+
+          <!-- Encabezado superior izquierda -->
+  <!-- 🔵 Encabezado Izquierdo: Logo + Nombre -->
+  <div class="fb-profile position-absolute top-0 start-0 d-flex align-items-center px-2 py-1 z-1 rounded-end">
+    <img [src]="imgFB" alt="Facebook Logo" class="rounded-circle me-2" style="height: 30px; width: 30px;">
+    <span class="text-white fw-semibold">{{ nameFB }}</span>
+  </div>
+ 
+<!-- Ícono Facebook arriba derecha con fondo circular -->
+<div class="position-absolute top-0 end-0 p-2 z-1">
+  <div class="facebook-icon-circle d-flex justify-content-center align-items-center">
+    <i class="bi bi-facebook"></i>
+  </div>
+</div>
+          <!-- Contenido multimedia -->
           <ng-container [ngSwitch]="post.type">
             <img *ngSwitchCase="'image'" [src]="post.src" alt="Facebook image" class="img-fluid post-image" />
             <video *ngSwitchCase="'video'" class="img-fluid post-image" muted>
               <source [src]="post.src" type="video/mp4" />
             </video>
           </ng-container>
-          <p class="post-date mt-2">
-            {{ post.created_time | date: 'mediumDate' }}
-          </p>
+
+          <!-- Fecha dentro de la imagen, parte inferior -->
+          <div class="position-absolute bottom-0 start-0 w-100 px-3 py-1 bg-dark bg-opacity-50 z-1 text-end">
+            <span class="post-date">{{ post.created_time | date: 'mediumDate' }}</span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -26,5 +44,4 @@
       </button>
     </div>
   </div>
- 
 </section>
