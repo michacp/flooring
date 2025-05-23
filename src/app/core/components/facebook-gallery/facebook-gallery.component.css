@@ -62,3 +62,26 @@ background-color: rgba(0, 0, 0, 0.4); /* Fondo 100% transparente */
 .fb-profile:hover {
   transform: scale(1.05);
 }
+
+
+
+.post-card {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .media-icon {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover .media-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

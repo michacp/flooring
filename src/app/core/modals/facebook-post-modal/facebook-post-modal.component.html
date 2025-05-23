@@ -1,14 +1,26 @@
-<div class="aspect-wrapper">
-  <video *ngIf="selectedPost.type === 'video'; else imageContent"
-         class="media-element"
-         controls
-         autoplay
-         muted
-         [src]="selectedPost.src">
-  </video>
-  <ng-template #imageContent>
-    <img [src]="selectedPost.src"
-         class="media-element"
-         alt="Facebook Post" />
-  </ng-template>
-</div> 
+<div class="carousel-wrapper">
+  <div class="aspect-wrapper">
+    <video *ngIf="selectedPost.type === 'video'; else imageContent"
+           class="media-element"
+           controls
+           autoplay
+           muted
+           [src]="selectedPost.src">
+    </video>
+    <ng-template #imageContent>
+      <img [src]="selectedPost.src"
+           class="media-element"
+           alt="Facebook Post" />
+    </ng-template>
+  </div>
+
+  <div class="controls">
+    <button mat-icon-button (click)="prev()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <span>{{ currentIndex + 1 }} / {{ data.selectedPost.length }}</span>
+    <button mat-icon-button (click)="next()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>

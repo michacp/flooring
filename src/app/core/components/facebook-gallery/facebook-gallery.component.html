@@ -6,7 +6,7 @@
 
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4 mb-4" *ngFor="let post of visiblePosts">
-        <div class="post-card position-relative" (click)="openModal(post)">
+        <div class="post-card position-relative" (click)="openModal(post.datas)">
 
           <!-- Encabezado superior izquierda -->
   <!-- 🔵 Encabezado Izquierdo: Logo + Nombre -->
@@ -28,7 +28,17 @@
               <source [src]="post.src" type="video/mp4" />
             </video>
           </ng-container>
-
+<!-- Ícono en el centro dependiendo del tipo -->
+<div class="position-absolute top-50 start-50 translate-middle z-2 media-icon">
+  <i
+    *ngIf="post.type === 'image'"
+    class="bi bi-image text-white fs-1 bg-dark bg-opacity-50 p-2 rounded-circle"
+  ></i>
+  <i
+    *ngIf="post.type === 'video'"
+    class="bi bi-play-circle text-white fs-1 bg-dark bg-opacity-50 p-2 rounded-circle"
+  ></i>
+</div>
           <!-- Fecha dentro de la imagen, parte inferior -->
           <div class="position-absolute bottom-0 start-0 w-100 px-3 py-1 bg-dark bg-opacity-50 z-1 text-end">
             <span class="post-date">{{ post.created_time | date: 'mediumDate' }}</span>
