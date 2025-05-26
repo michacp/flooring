@@ -14,7 +14,7 @@ export class FacebookApiService {
    constructor(private http: HttpClient) {}
   // Solo se llama una vez (cuando inicia la app)
   fetchAlbum(): Observable<any> {
-    const url = `https://graph.facebook.com/v22.0/${this.pageId}?fields=name,picture,feed.limit(4){message,permalink_url,attachments{media,subattachments},created_time}&access_token=${this.accessToken}`
+    const url = `https://graph.facebook.com/v22.0/${this.pageId}?fields=name,picture,feed.limit(10){message,permalink_url,attachments{media,subattachments},created_time}&access_token=${this.accessToken}`
     //`https://graph.facebook.com/v22.0/${this.pageId}/posts?fields=message,attachments{media,subattachments},created_time&limit=4&access_token=${this.accessToken}`;
 
     return this.http.get(url).pipe(

@@ -65,6 +65,28 @@
   "TITLE": "Latest Facebook Posts",
   "LOAD_MORE": "Load more posts",
   "VIEW_ON_FACEBOOK": "View on Facebook"
-}
+},
+  "CONTACT_US": {
+    "TITLE": "Contact Us",
+    "DESCRIPTION": "Get in touch with us for a consultation or to request a quote.",
+    "PHONE": "Phone",
+    "EMAIL": "Email",
+    "ADDRESS": "Address",
+    "REQUEST_QUOTE": "Request Quote"
+  },
+  "FOOTER": {
+    "COMPANY_NAME": "Discount Flooring",
+    "DESCRIPTION": "Experts in flooring installation for homes and businesses.",
+    "NAVIGATION": "Navigation",
+    "HOME": "Home",
+    "SERVICES": "Our Services",
+    "ABOUT": "About Us",
+    "CONTACT": "Contact Us",
+    "CONTACT_US": "Contact Information",
+    "PHONE": "Phone: (123) 456-7890",
+    "EMAIL": "Email: info@discountflooring.com",
+    "ADDRESS": "Address: 123 Flooring Street, City, Country",
+    "RIGHTS": "All rights reserved"
+  }
 
 }

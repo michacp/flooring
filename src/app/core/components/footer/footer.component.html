@@ -1,0 +1,49 @@
+<footer class="footer-section fade-in-up text-white pt-5 pb-3">
+  <div class="container">
+
+    <div class="row text-center text-md-start">
+
+      <!-- Logo / Nombre -->
+<div class="col-md-4 mb-4">
+  <div class="d-flex align-items-center mb-3">
+    <img src="images/logob.png" alt="Logo" style="height: 40px;" class="me-2" />
+    <h5 class="text-uppercase text-warning mb-0">{{ 'FOOTER.COMPANY_NAME' | translate }}</h5>
+  </div>
+  <p>{{ 'FOOTER.DESCRIPTION' | translate }}</p>
+</div>
+
+      <!-- Navegación -->
+      <div class="col-md-4 mb-4">
+        <h6 class="text-uppercase mb-3">{{ 'FOOTER.NAVIGATION' | translate }}</h6>
+        <ul class="list-unstyled">
+          <li><a routerLink="/" class="footer-link">{{ 'FOOTER.HOME' | translate }}</a></li>
+          <li><a routerLink="/services" class="footer-link">{{ 'FOOTER.SERVICES' | translate }}</a></li>
+          <li><a routerLink="/about" class="footer-link">{{ 'FOOTER.ABOUT' | translate }}</a></li>
+          <li><a routerLink="/contact" class="footer-link">{{ 'FOOTER.CONTACT' | translate }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-4 mb-4">
+        <h6 class="text-uppercase mb-3">{{ 'FOOTER.CONTACT_US' | translate }}</h6>
+        <p><i class="bi bi-telephone me-2"></i> {{ 'FOOTER.PHONE' | translate }}</p>
+        <p><i class="bi bi-envelope me-2"></i> {{ 'FOOTER.EMAIL' | translate }}</p>
+        <p><i class="bi bi-geo-alt me-2"></i> {{ 'FOOTER.ADDRESS' | translate }}</p>
+      </div>
+    </div>
+
+    <hr class="border-top border-light" />
+
+    <div class="row text-center">
+      <div class="col-md-6 mb-2 mb-md-0">
+        <p class="mb-0">&copy; {{ currentYear }} {{ 'FOOTER.COMPANY_NAME' | translate }} - {{ 'FOOTER.RIGHTS' | translate }}</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3">
+        <a [href]="facebookUrl" target="_blank" aria-label="Facebook" class="social-icon bi bi-facebook"></a>
+        <a [href]="instagramUrl" target="_blank" aria-label="Instagram" class="social-icon bi bi-instagram"></a>
+        <a [href]="tiktokUrl" target="_blank" aria-label="TikTok" class="social-icon bi bi-tiktok"></a>
+      </div>
+    </div>
+
+  </div>
+</footer>

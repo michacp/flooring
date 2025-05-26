@@ -4,6 +4,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { environment } from '../../../../environments/environment';
 export interface FacebookMediaData {
   type: 'image' | 'video';
   src: string; 
@@ -16,8 +17,12 @@ export interface FacebookMediaData {
 })
 export class FacebookPostModalComponent {
   currentIndex = 0;
-
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { selectedPost: FacebookMediaData[] }) {}
+fburl=environment.facebook_url
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { selectedPost: FacebookMediaData[],    data: {
+      imgFB: string,
+      nameFB: string,
+      url:string
+    } }) {}
 
   get selectedPost(): FacebookMediaData {
     return this.data.selectedPost[this.currentIndex];

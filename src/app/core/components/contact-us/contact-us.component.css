@@ -1,0 +1,21 @@
+.contact-section {
+  background-color: #1A1A1A;
+
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  i:hover {
+    transform: scale(1.2);
+  }
+
+  button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #FFD700;
+    color: black;
+    transform: scale(1.05);
+  }
+}

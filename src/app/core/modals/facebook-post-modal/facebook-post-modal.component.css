@@ -1,27 +1,131 @@
 .carousel-wrapper {
-    overflow: hidden;
-  max-height: 100%;
   width: 100%;
-  max-width: 90vw; 
+  max-width: 90vw;
+  max-height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .aspect-wrapper {
+  position: relative;
   width: 100%;
-  height: 100%;
   max-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Media (imagen o video) */
 .media-element {
-  width: auto;
   max-width: 100%;
-  height: auto;
   max-height: 80vh;
   object-fit: contain;
   border-radius: 10px;
+}
+
+/* Ocultar elementos por defecto */
+.counter,
+.nav-button,
+.overlay-header {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Mostrar en hover */
+.aspect-wrapper:hover .counter,
+.aspect-wrapper:hover .nav-button,
+.aspect-wrapper:hover .overlay-header {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Botones laterales */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+}
+.nav-button.left {
+  left: 10px;
+}
+.nav-button.right {
+  right: 10px;
+}
+
+/* Barra superior */
+.overlay-header {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Información del perfil */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.profile-name {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Ícono de Facebook */
+.facebook-icon {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.facebook-icon mat-icon {
+  color: #1877f2; /* Azul Facebook */
+  font-size: 20px;
+  line-height: 20px;
+}
+.facebook-icon mat-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contador justo debajo del encabezado */
+.counter {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3px 8px;
+  border-radius: 5px;
+  z-index: 10;
 }
