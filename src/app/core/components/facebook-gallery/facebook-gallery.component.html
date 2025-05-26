@@ -5,17 +5,51 @@
     </h2>
 
     <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let post of visiblePosts">
-        <div class="post-card" (click)="openModal(post)">
+      <div class="col-12 col-sm-6 col-md-4 mb-4" *ngFor="let post of visiblePosts">
+        <div class="post-card position-relative" (click)="openModal(post.datas,post.url)">
+
+          <!-- Encabezado superior izquierda -->
+          <a [href]="post.url" target="_blank" 
+             class="fb-profile position-absolute top-0 start-0 d-flex align-items-center px-2 py-1 z-1 rounded-end text-decoration-none"
+             (click)="$event.stopPropagation()">
+            <img [src]="imgFB" alt="Facebook Logo" class="rounded-circle me-2" style="height: 30px; width: 30px;">
+            <span class="text-white fw-semibold">{{ nameFB }}</span>
+          </a>
+ 
+          <!-- Ícono Facebook arriba derecha con fondo circular - ahora es un enlace -->
+          <a [href]='fburl' target="_blank" 
+             class="position-absolute top-0 end-0 p-2 z-1 text-decoration-none"
+             (click)="$event.stopPropagation()">
+            <div class="facebook-icon-circle d-flex justify-content-center align-items-center">
+              <i class="bi bi-facebook"></i>
+            </div>
+          </a>
+
+          <!-- Contenido multimedia -->
           <ng-container [ngSwitch]="post.type">
             <img *ngSwitchCase="'image'" [src]="post.src" alt="Facebook image" class="img-fluid post-image" />
             <video *ngSwitchCase="'video'" class="img-fluid post-image" muted>
               <source [src]="post.src" type="video/mp4" />
             </video>
           </ng-container>
-          <p class="post-date mt-2">
-            {{ post.created_time | date: 'mediumDate' }}
-          </p>
+
+          <!-- Ícono en el centro dependiendo del tipo -->
+          <div class="position-absolute top-50 start-50 translate-middle z-2 media-icon">
+            <i
+              *ngIf="post.type === 'image'"
+              class="bi bi-image text-white fs-1 bg-dark bg-opacity-50 p-2 rounded-circle"
+            ></i>
+            <i
+              *ngIf="post.type === 'video'"
+              class="bi bi-play-circle text-white fs-1 bg-dark bg-opacity-50 p-2 rounded-circle"
+            ></i>
+          </div>
+
+          <!-- Fecha dentro de la imagen, parte inferior -->
+          <div class="position-absolute bottom-0 start-0 w-100 px-3 py-1 bg-dark bg-opacity-50 z-1 text-end">
+            <span class="post-date">{{ post.created_time | date: 'mediumDate' }}</span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -26,5 +60,4 @@
       </button>
     </div>
   </div>
- 
 </section>

@@ -46,25 +46,46 @@
     }
   },
   "EXPERIENCE": {
-  "TITLE": "Nuestra Experiencia",
-  "DESCRIPTION": "En Discount Flooring, contamos con años de experiencia en la instalación de todo tipo de pisos, desde elegantes pisos de madera hasta resistentes baldosas y alfombras cómodas. Nuestro equipo está comprometido con la excelencia, asegurando acabados de alta calidad y satisfacción total del cliente en cada proyecto. Trabajamos con materiales de primera y tecnologías modernas para garantizar resultados duraderos y estéticamente impecables.",
-  "CARD1": {
-    "TITLE": "Instalación Profesional",
-    "DESCRIPTION": "Nuestro equipo de expertos se encarga de la instalación de pisos con precisión y eficiencia, garantizando un acabado perfecto."
+    "TITLE": "Nuestra Experiencia",
+    "DESCRIPTION": "En Discount Flooring, contamos con años de experiencia en la instalación de todo tipo de pisos, desde elegantes pisos de madera hasta resistentes baldosas y alfombras cómodas. Nuestro equipo está comprometido con la excelencia, asegurando acabados de alta calidad y satisfacción total del cliente en cada proyecto. Trabajamos con materiales de primera y tecnologías modernas para garantizar resultados duraderos y estéticamente impecables.",
+    "CARD1": {
+      "TITLE": "Instalación Profesional",
+      "DESCRIPTION": "Nuestro equipo de expertos se encarga de la instalación de pisos con precisión y eficiencia, garantizando un acabado perfecto."
+    },
+    "CARD2": {
+      "TITLE": "Asesoría Personalizada",
+      "DESCRIPTION": "Te ayudamos a elegir el piso ideal para tu espacio, considerando estilo, durabilidad y presupuesto."
+    },
+    "CARD3": {
+      "TITLE": "Materiales de Alta Calidad",
+      "DESCRIPTION": "Trabajamos solo con los mejores proveedores para asegurar pisos resistentes y con un acabado superior."
+    }
   },
-  "CARD2": {
-    "TITLE": "Asesoría Personalizada",
-    "DESCRIPTION": "Te ayudamos a elegir el piso ideal para tu espacio, considerando estilo, durabilidad y presupuesto."
+  "FACEBOOK_GALLERY": {
+    "TITLE": "Últimas publicaciones en Facebook",
+    "LOAD_MORE": "Cargar más publicaciones",
+    "VIEW_ON_FACEBOOK": "Ver en Facebook"
   },
-  "CARD3": {
-    "TITLE": "Materiales de Alta Calidad",
-    "DESCRIPTION": "Trabajamos solo con los mejores proveedores para asegurar pisos resistentes y con un acabado superior."
+    "CONTACT_US": {
+    "TITLE": "Contáctanos",
+    "DESCRIPTION": "Ponte en contacto con nosotros para una consulta o para solicitar una cotización.",
+    "PHONE": "Teléfono",
+    "EMAIL": "Correo Electrónico",
+    "ADDRESS": "Dirección",
+    "REQUEST_QUOTE": "Solicitar Cotización"
+  },
+  "FOOTER": {
+    "COMPANY_NAME": "Discount Flooring",
+    "DESCRIPTION": "Expertos en instalación de pisos para hogares y negocios.",
+    "NAVIGATION": "Navegación",
+    "HOME": "Inicio",
+    "SERVICES": "Nuestros Servicios",
+    "ABOUT": "Sobre Nosotros",
+    "CONTACT": "Contáctanos",
+    "CONTACT_US": "Información de Contacto",
+    "PHONE": "Teléfono: (123) 456-7890",
+    "EMAIL": "Correo: info@discountflooring.com",
+    "ADDRESS": "Dirección: 123 Calle de Pisos, Ciudad, País",
+    "RIGHTS": "Todos los derechos reservados"
   }
-},
-"FACEBOOK_GALLERY": {
-  "TITLE": "Últimas publicaciones en Facebook",
-  "LOAD_MORE": "Cargar más publicaciones",
-  "VIEW_ON_FACEBOOK": "Ver en Facebook"
-} 
-
 }

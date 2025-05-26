@@ -7,7 +7,23 @@
 
 🔷 Construir y levantar contenedores (modo desarrollo)  
 🟢 docker compose -f docker-compose.dev.yml up --build
-git pull origin main
+git pull origin feature/publicacionesFB
+Actualiza la lista de ramas remotas:
+
+bash
+git fetch origin
+Verifica si la rama existe:
+
+bash
+git branch -a
+Si aparece en rojo (remotes/origin/feature/publicacionesFB), existe en GitHub pero no localmente.
+
+Si no aparece, revisa el nombre o si la rama fue subida.
+
+Si la rama ya existe localmente:
+
+bash
+git checkout feature/publicacionesFB
 🔷 Detener contenedores y eliminar redes/volúmenes temporales  
 🟢 docker compose -f docker-compose.dev.yml down
 

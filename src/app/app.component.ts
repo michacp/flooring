@@ -7,11 +7,13 @@ import { ServicesSectionComponent } from './core/components/services-section/ser
 import { ExperienceSectionComponent } from './core/components/experience-section/experience-section.component';
 import { FacebookApiService } from './core/services/facebook-api/facebook-api.service';
 import { FacebookGalleryComponent } from './core/components/facebook-gallery/facebook-gallery.component';
+import { ContactUsComponent } from './core/components/contact-us/contact-us.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, CarouselFbComponent,TiktokCarrucelComponent,ServicesSectionComponent,
-    ExperienceSectionComponent,FacebookGalleryComponent],
+    ExperienceSectionComponent,FacebookGalleryComponent,ContactUsComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

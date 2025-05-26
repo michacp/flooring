@@ -1,14 +1,53 @@
-<div class="aspect-wrapper">
-  <video *ngIf="selectedPost.type === 'video'; else imageContent"
-         class="media-element"
-         controls
-         autoplay
-         muted
-         [src]="selectedPost.src">
-  </video>
-  <ng-template #imageContent>
-    <img [src]="selectedPost.src"
-         class="media-element"
-         alt="Facebook Post" />
-  </ng-template>
-</div> 
+<div class="carousel-wrapper">
+  <div class="aspect-wrapper">
+    
+    <!-- Encabezado con perfil y Facebook -->
+    <div class="overlay-header">
+      <!-- Perfil (imagen + nombre) - ahora es un enlace -->
+      <a [href]="data.data.url" target="_blank" 
+         class="profile-info text-decoration-none"
+         (click)="$event.stopPropagation()">
+        <img [src]="data.data.imgFB" class="profile-img" alt="Profile" />
+        <span class="profile-name">{{ data.data.nameFB }}</span>
+      </a>
+
+      <!-- Icono Facebook - ahora es un enlace -->
+      <a [href]='fburl' target="_blank" 
+         class="facebook-icon text-decoration-none"
+         (click)="$event.stopPropagation()">
+        <mat-icon>facebook</mat-icon>
+      </a>
+    </div>
+
+
+    <!-- Contador debajo del encabezado -->
+    <div class="counter">
+      {{ currentIndex + 1 }} / {{ data.selectedPost.length }}
+    </div>
+
+    <!-- Botón izquierdo -->
+    <button class="nav-button left" mat-icon-button (click)="prev()">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <!-- Media -->
+    <video *ngIf="selectedPost.type === 'video'; else imageContent"
+           class="media-element"
+           controls
+           autoplay
+           muted
+           [src]="selectedPost.src">
+    </video>
+
+    <ng-template #imageContent>
+      <img [src]="selectedPost.src"
+           class="media-element"
+           alt="Facebook Post" />
+    </ng-template>
+
+    <!-- Botón derecho -->
+    <button class="nav-button right" mat-icon-button (click)="next()">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</div>
