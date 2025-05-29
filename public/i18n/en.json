@@ -76,7 +76,7 @@
   },
   "FOOTER": {
     "COMPANY_NAME": "Discount Flooring",
-    "DESCRIPTION": "Experts in flooring installation for homes and businesses.",
+    "DESCRIPTION": "Experts in floor installation for homes and businesses.",
     "NAVIGATION": "Navigation",
     "HOME": "Home",
     "SERVICES": "Our Services",
@@ -85,8 +85,11 @@
     "CONTACT_US": "Contact Information",
     "PHONE": "Phone: (123) 456-7890",
     "EMAIL": "Email: info@discountflooring.com",
-    "ADDRESS": "Address: 123 Flooring Street, City, Country",
-    "RIGHTS": "All rights reserved"
+    "ADDRESS": "Address: 123 Floor Street, City, Country",
+    "RIGHTS": "All rights reserved",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "TERMS_OF_SERVICE": "Terms of Service",
+    "DATA_DELETION": "Data Deletion Instructions"
   }
 
 }
