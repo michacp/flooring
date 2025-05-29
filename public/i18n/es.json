@@ -74,7 +74,7 @@
     "ADDRESS": "Dirección",
     "REQUEST_QUOTE": "Solicitar Cotización"
   },
-  "FOOTER": {
+"FOOTER": {
     "COMPANY_NAME": "Discount Flooring",
     "DESCRIPTION": "Expertos en instalación de pisos para hogares y negocios.",
     "NAVIGATION": "Navegación",
@@ -86,6 +86,9 @@
     "PHONE": "Teléfono: (123) 456-7890",
     "EMAIL": "Correo: info@discountflooring.com",
     "ADDRESS": "Dirección: 123 Calle de Pisos, Ciudad, País",
-    "RIGHTS": "Todos los derechos reservados"
+    "RIGHTS": "Todos los derechos reservados",
+    "PRIVACY_POLICY": "Política de privacidad",
+    "TERMS_OF_SERVICE": "Términos del servicio",
+    "DATA_DELETION": "Eliminación de datos"
   }
 }
