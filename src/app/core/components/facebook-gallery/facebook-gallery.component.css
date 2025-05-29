@@ -1,8 +1,5 @@
 /* Fondo principal de la sección */
-section.bg-dark {
-  background-color: #1A1A1A !important;
-}
-
+ 
 /* Tarjeta individual */
 .post-card {
   background-color: #2B2B2B;
