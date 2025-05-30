@@ -1,0 +1,12 @@
+::ng-deep .breadcrumb-item + .breadcrumb-item::before {
+  color: #fff;
+}
+.gold-link {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.gold-link:hover {
+  color: #E6C200;
+}

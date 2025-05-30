@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { TranslateModule } from '@ngx-translate/core';
+import { BannerComponent } from '../banner/banner.component';
 @Component({
   selector: 'app-contact-us',
   imports: [TranslateModule],
