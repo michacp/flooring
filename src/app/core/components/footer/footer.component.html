@@ -39,9 +39,9 @@
         <p class="mb-0">&copy; {{ currentYear }} {{ 'FOOTER.COMPANY_NAME' | translate }} - {{ 'FOOTER.RIGHTS' | translate }}</p>
       </div>
       <div class="col-md-6 d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-2 text-center text-md-end">
-        <a href="#" class="footer-link small">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
-        <a href="#" class="footer-link small">{{ 'FOOTER.TERMS_OF_SERVICE' | translate }}</a>
-        <a href="#" class="footer-link small">{{ 'FOOTER.DATA_DELETION' | translate }}</a>
+        <a routerLink="/privacy-policy" class="footer-link small">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
+        <a routerLink="/terms-of-service" class="footer-link small">{{ 'FOOTER.TERMS_OF_SERVICE' | translate }}</a>
+        <a routerLink="/data-deletion-instructions" class="footer-link small">{{ 'FOOTER.DATA_DELETION' | translate }}</a>
         <div class="d-flex gap-3 mt-2 mt-md-0 justify-content-center justify-content-md-end">
           <a [href]="facebookUrl" target="_blank" aria-label="Facebook" class="social-icon bi bi-facebook"></a>
           <a [href]="instagramUrl" target="_blank" aria-label="Instagram" class="social-icon bi bi-instagram"></a>

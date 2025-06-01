@@ -1,9 +1,10 @@
 import { Component, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-footer',
-  imports: [TranslateModule],
+  imports: [TranslateModule,RouterLink, RouterLinkActive],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

@@ -1,0 +1,22 @@
+<div class="position-relative w-100 overflow-hidden" style="height: 300px;">
+  <!-- Imagen de fondo con oscurecimiento -->
+  <img [src]="imageUrl"
+       alt="Banner"
+       class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+       style="z-index: 0; filter: brightness(60%);" />
+
+  <!-- Contenido del banner -->
+  <div class="position-relative z-1 d-flex flex-column justify-content-center align-items-center h-100 text-white px-3 text-center">
+    <h1 class="text-uppercase mb-2 mat-headline" style="color: #FFD700;">{{ title }}</h1>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center m-0">
+        <li *ngFor="let item of breadcrumb; let last = last" class="breadcrumb-item"
+            [class.active]="last" [attr.aria-current]="last ? 'page' : null">
+<a *ngIf="!last" href="#" class="gold-link">{{ item }}</a>
+          <span *ngIf="last" class="text-light">{{ item }}</span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
