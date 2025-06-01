@@ -1,1 +1,45 @@
-<p>terms-of-service works!</p>
+<app-banner
+  [title]="('TERMS.TITLE' | translate)"
+  [breadcrumb]="[('NAVBAR.HOME'| translate), ('TERMS.TITLE' | translate)]" >
+</app-banner> 
+<div class="container-fluid py-5 bg-dark text-light min-vh-100">
+  <div class="container">
+    <mat-card class="bg-secondary text-light shadow-lg border-0 px-4 py-4">
+      <mat-card-header>
+        <h1 class="text-center text-uppercase text-warning">
+          {{ 'TERMS.TITLE' | translate }}
+        </h1>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ 'TERMS.INTRO' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'TERMS.SECTION1.TITLE' | translate }}
+        </h5>
+        <p>{{ 'TERMS.SECTION1.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'TERMS.SECTION2.TITLE' | translate }}
+        </h5>
+        <p>{{ 'TERMS.SECTION2.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'TERMS.SECTION3.TITLE' | translate }}
+        </h5>
+        <p>{{ 'TERMS.SECTION3.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'TERMS.SECTION4.TITLE' | translate }}
+        </h5>
+        <p>{{ 'TERMS.SECTION4.CONTENT' | translate }}</p>
+
+        <p class="mt-4">
+          {{ 'TERMS.QUESTIONS' | translate }}
+          <a href="mailto:info@discountflooring.com" class="gold-link">
+            info&#64;discountflooring.com
+          </a>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

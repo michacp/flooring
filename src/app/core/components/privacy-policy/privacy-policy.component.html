@@ -1,5 +1,50 @@
 <app-banner
-  [title]="'Nuestros Servicios'"
-  [breadcrumb]="['Inicio', 'Servicios']" >
-</app-banner>
-<p>privacy-policy works!</p>
+  [title]="('PRIVACY_POLICY.TITLE' | translate)"
+  [breadcrumb]="[('NAVBAR.HOME'| translate), ('PRIVACY_POLICY.TITLE' | translate)]" >
+</app-banner> 
+<div class="container-fluid py-5 bg-dark text-light min-vh-100">
+  <div class="container">
+    <mat-card class="bg-secondary text-light shadow-lg border-0 px-4 py-4">
+      <mat-card-header>
+        <h1 class="text-center text-uppercase text-warning">
+          {{ 'PRIVACY_POLICY.TITLE' | translate }}
+        </h1>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ 'PRIVACY_POLICY.INTRO' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'PRIVACY_POLICY.SECTION1.TITLE' | translate }}
+        </h5>
+        <p>{{ 'PRIVACY_POLICY.SECTION1.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'PRIVACY_POLICY.SECTION2.TITLE' | translate }}
+        </h5>
+        <p>{{ 'PRIVACY_POLICY.SECTION2.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'PRIVACY_POLICY.SECTION3.TITLE' | translate }}
+        </h5>
+        <p>{{ 'PRIVACY_POLICY.SECTION3.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'PRIVACY_POLICY.SECTION4.TITLE' | translate }}
+        </h5>
+        <p>{{ 'PRIVACY_POLICY.SECTION4.CONTENT' | translate }}</p>
+
+        <h5 class="text-warning mt-4">
+          {{ 'PRIVACY_POLICY.SECTION5.TITLE' | translate }}
+        </h5>
+        <p>{{ 'PRIVACY_POLICY.SECTION5.CONTENT' | translate }}</p>
+
+        <p class="mt-4">
+          {{ 'PRIVACY_POLICY.QUESTIONS' | translate }}
+          <a href="mailto:info@discountflooring.com" class="gold-link">
+            info&#64;discountflooring.com
+          </a>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

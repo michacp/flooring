@@ -1,0 +1,14 @@
+.gold-link {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.gold-link:hover {
+  color: #E6C200;
+}
+
+/* Asegura que el mat-card adopte los colores definidos */
+::ng-deep .mat-card.bg-secondary {
+  background-color: #343a40 !important; /* color oscuro Bootstrap */
+  color: #ffffff !important;
+}

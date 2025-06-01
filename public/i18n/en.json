@@ -90,6 +90,63 @@
     "PRIVACY_POLICY": "Privacy Policy",
     "TERMS_OF_SERVICE": "Terms of Service",
     "DATA_DELETION": "Data Deletion Instructions"
-  }
+  },
+  "PRIVACY_POLICY": {
+    "TITLE": "Privacy Policy",
+    "INTRO": "At Discount Flooring, we respect your privacy and are committed to protecting the personal information you provide to us.",
+    "SECTION1": {
+      "TITLE": "1. Information We Collect",
+      "CONTENT": "We may collect personal details such as name, email, phone number, and address when you contact us or use our services."
+    },
+    "SECTION2": {
+      "TITLE": "2. How We Use Your Information",
+      "CONTENT": "We use your information to provide better service, respond to inquiries, and improve customer support."
+    },
+    "SECTION3": {
+      "TITLE": "3. Sharing Information",
+      "CONTENT": "We do not share your information with third parties unless necessary for service delivery or required by law."
+    },
+    "SECTION4": {
+      "TITLE": "4. Security",
+      "CONTENT": "We take reasonable steps to protect your data from unauthorized access, alteration, or disclosure."
+    },
+    "SECTION5": {
+      "TITLE": "5. Policy Updates",
+      "CONTENT": "We may update this policy from time to time. Please review it periodically to stay informed."
+    },
+    "QUESTIONS": "If you have questions about this policy, contact us at"
+  },
+  "TERMS": {
+  "TITLE": "Terms of Service",
+  "INTRO": "By using our website and services, you agree to the following terms and conditions.",
+  "SECTION1": {
+    "TITLE": "1. Use of the Site",
+    "CONTENT": "You agree to use our site only for lawful purposes and in accordance with these Terms."
+  },
+  "SECTION2": {
+    "TITLE": "2. Intellectual Property",
+    "CONTENT": "All content on this site is the property of Discount Flooring and is protected by copyright laws."
+  },
+  "SECTION3": {
+    "TITLE": "3. Limitation of Liability",
+    "CONTENT": "We are not liable for any damages arising from the use of our website or services."
+  },
+  "SECTION4": {
+    "TITLE": "4. Changes to the Terms",
+    "CONTENT": "We reserve the right to modify these terms at any time. Continued use of the site constitutes acceptance of the new terms."
+  },
+  "QUESTIONS": "If you have any questions about these terms, contact us at"
+},
+"DATA_DELETION": {
+  "TITLE": "Data Deletion Instructions",
+  "DESCRIPTION": "If you wish to delete your data associated with our app or services, please follow the steps below.",
+  "STEPS": {
+    "TITLE": "How to Request Data Deletion",
+    "STEP1": "Send an email to info@discountflooring.com with the subject 'Data Deletion Request'.",
+    "STEP2": "Include your full name and the email address linked to your account.",
+    "STEP3": "We will process your request and confirm once your data has been deleted."
+  },
+  "CONTACT": "If you have any questions, feel free to contact us at"
+}
 
 }

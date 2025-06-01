@@ -90,5 +90,62 @@
     "PRIVACY_POLICY": "Política de privacidad",
     "TERMS_OF_SERVICE": "Términos del servicio",
     "DATA_DELETION": "Eliminación de datos"
-  }
+  },
+    "PRIVACY_POLICY": {
+    "TITLE": "Política de Privacidad",
+    "INTRO": "En Discount Flooring, respetamos tu privacidad y protegemos la información personal que nos proporcionas.",
+    "SECTION1": {
+      "TITLE": "1. Información que recopilamos",
+      "CONTENT": "Podemos recopilar información como nombre, correo electrónico, teléfono y dirección cuando nos contactas o usas nuestros servicios."
+    },
+    "SECTION2": {
+      "TITLE": "2. Uso de la información",
+      "CONTENT": "Utilizamos tus datos para ofrecerte un mejor servicio, responder tus consultas y mejorar nuestra atención."
+    },
+    "SECTION3": {
+      "TITLE": "3. Compartir información",
+      "CONTENT": "No compartimos tu información con terceros, salvo que sea necesario para brindarte el servicio o por obligación legal."
+    },
+    "SECTION4": {
+      "TITLE": "4. Seguridad",
+      "CONTENT": "Protegemos tu información contra accesos no autorizados, alteraciones o divulgaciones."
+    },
+    "SECTION5": {
+      "TITLE": "5. Cambios a esta política",
+      "CONTENT": "Podemos actualizar esta política ocasionalmente. Te recomendamos revisarla periódicamente."
+    },
+    "QUESTIONS": "Si tienes preguntas sobre esta política, escríbenos a"
+  },
+  "TERMS": {
+  "TITLE": "Términos del Servicio",
+  "INTRO": "Al utilizar nuestro sitio web y servicios, aceptas los siguientes términos y condiciones.",
+  "SECTION1": {
+    "TITLE": "1. Uso del Sitio",
+    "CONTENT": "Aceptas utilizar nuestro sitio solo para fines legales y de acuerdo con estos Términos."
+  },
+  "SECTION2": {
+    "TITLE": "2. Propiedad Intelectual",
+    "CONTENT": "Todo el contenido en este sitio es propiedad de Discount Flooring y está protegido por leyes de derechos de autor."
+  },
+  "SECTION3": {
+    "TITLE": "3. Limitación de Responsabilidad",
+    "CONTENT": "No somos responsables de ningún daño derivado del uso de nuestro sitio web o servicios."
+  },
+  "SECTION4": {
+    "TITLE": "4. Cambios en los Términos",
+    "CONTENT": "Nos reservamos el derecho de modificar estos términos en cualquier momento. El uso continuo del sitio implica la aceptación de los nuevos términos."
+  },
+  "QUESTIONS": "Si tienes preguntas sobre estos términos, contáctanos en"
+},
+"DATA_DELETION": {
+  "TITLE": "Instrucciones para la Eliminación de Datos",
+  "DESCRIPTION": "Si deseas eliminar los datos asociados a nuestra aplicación o servicios, por favor sigue los pasos a continuación.",
+  "STEPS": {
+    "TITLE": "Cómo Solicitar la Eliminación de Datos",
+    "STEP1": "Envía un correo a info@discountflooring.com con el asunto 'Solicitud de Eliminación de Datos'.",
+    "STEP2": "Incluye tu nombre completo y el correo electrónico vinculado a tu cuenta.",
+    "STEP3": "Procesaremos tu solicitud y te confirmaremos una vez que los datos hayan sido eliminados."
+  },
+  "CONTACT": "Si tienes preguntas, contáctanos en"
+}
 }
