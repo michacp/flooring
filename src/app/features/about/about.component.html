@@ -1,1 +1,86 @@
-<p>about works!</p>
+<app-banner
+  [title]="('ABOUT.TITLE' | translate)"
+  [breadcrumb]="[('NAVBAR.HOME'| translate), ('ABOUT.TITLE' | translate)]" >
+</app-banner>
+<div class="container-fluid bg-dark text-light py-5 min-vh-100">
+  <div class="container">
+
+    <!-- Card 1: Imagen izquierda -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <img src="assets/about1.jpg" alt="Misión" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-7">
+        <mat-card class="service-card bg-secondary text-light shadow-lg border-0 p-4">
+          <p class="lead">{{ 'ABOUT.TAGLINE' | translate }}</p>
+          <p>{{ 'ABOUT.MISSION' | translate }}</p>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- Card 2: Imagen derecha -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <img src="assets/about2.jpg" alt="Experiencia" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-7">
+        <mat-card class="service-card bg-secondary text-light shadow-lg border-0 p-4">
+          <h5 class="text-warning">{{ 'ABOUT.EXPERIENCE_TITLE' | translate }}</h5>
+          <p>{{ 'ABOUT.EXPERIENCE_DESC' | translate }}</p>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- Card 3: Imagen izquierda -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <img src="assets/about3.jpg" alt="Diferenciadores" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-7">
+        <mat-card class="service-card bg-secondary text-light shadow-lg border-0 p-4">
+          <h5 class="text-warning">{{ 'ABOUT.KEY_DIFFERENTIATORS_TITLE' | translate }}</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><mat-icon color="warn">bolt</mat-icon> {{ 'ABOUT.DIFF1' | translate }}</li>
+            <li class="mb-2"><mat-icon color="warn">receipt_long</mat-icon> {{ 'ABOUT.DIFF2' | translate }}</li>
+            <li class="mb-2"><mat-icon color="warn">verified</mat-icon> {{ 'ABOUT.DIFF3' | translate }}</li>
+            <li class="mb-2"><mat-icon color="warn">person</mat-icon> {{ 'ABOUT.DIFF4' | translate }}</li>
+          </ul>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- Card 4: Imagen derecha -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <img src="assets/about4.jpg" alt="Equipo" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-7">
+        <mat-card class="service-card bg-secondary text-light shadow-lg border-0 p-4">
+          <h5 class="text-warning">{{ 'ABOUT.TEAM_TITLE' | translate }}</h5>
+          <p>{{ 'ABOUT.TEAM_DESC' | translate }}</p>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- Card 5: Imagen izquierda -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <img src="assets/about5.jpg" alt="Compromiso" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-7">
+        <mat-card class="service-card bg-secondary text-light shadow-lg border-0 p-4">
+          <h5 class="text-warning">{{ 'ABOUT.CLIENT_FOCUS_TITLE' | translate }}</h5>
+          <p>{{ 'ABOUT.CLIENT_FOCUS_DESC' | translate }}</p>
+        </mat-card>
+      </div>
+    </div>
+
+    <!-- Botón de contacto -->
+    <div class="text-center mt-4">
+      <a mat-raised-button color="warn" class="text-dark bg-warning px-5 py-3"
+        routerLink="/contact">
+        <mat-icon>mail</mat-icon> {{ 'ABOUT.CTA' | translate }}
+      </a>
+    </div>
+  </div>
+</div>

@@ -35,8 +35,8 @@ export class NavbarComponent {
   }
 
   navLinks = [
-    { label: 'NAVBAR.HOME', path: '/', exact: true },
-    { label: 'NAVBAR.ABOUT', path: '/about', exact: false },
+    { label: 'NAVBAR.HOME', path: '/home', exact: true },
+    { label: 'NAVBAR.ABOUT', path: '/about-us', exact: false },
     { label: 'NAVBAR.SERVICES', path: '/services', exact: false },
     { label: 'NAVBAR.CONTACT', path: '/contact', exact: false }
   ];

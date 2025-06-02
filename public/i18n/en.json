@@ -147,6 +147,23 @@
     "STEP3": "We will process your request and confirm once your data has been deleted."
   },
   "CONTACT": "If you have any questions, feel free to contact us at"
+},
+"ABOUT": {
+  "TITLE": "About Us",
+  "TAGLINE": "Experts passionate about transforming spaces with quality flooring.",
+  "MISSION": "At Discount Flooring, we specialize in flooring installation for homes and businesses, offering durable, stylish solutions using premium and eco-friendly materials.",
+  "EXPERIENCE_TITLE": "Years of Experience",
+  "EXPERIENCE_DESC": "With over 10 years in the industry, we've installed more than 100,000 m² of flooring in residential and commercial projects, specializing in wood, vinyl, and carpet.",
+  "KEY_DIFFERENTIATORS_TITLE": "Why Choose Us?",
+  "DIFF1": "Fast and precise installation.",
+  "DIFF2": "Transparent quotes with no surprises.",
+  "DIFF3": "Extended warranty on all work.",
+  "DIFF4": "Personalized service from day one.",
+  "TEAM_TITLE": "Our Team",
+  "TEAM_DESC": "We have certified installers with years of experience and specialized training in all types of flooring.",
+  "CLIENT_FOCUS_TITLE": "Client Commitment",
+  "CLIENT_FOCUS_DESC": "We focus on your total satisfaction, providing post-installation cleaning and personalized follow-up.",
+  "CTA": "Request a Quote"
 }
 
 }
