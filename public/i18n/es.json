@@ -147,5 +147,22 @@
     "STEP3": "Procesaremos tu solicitud y te confirmaremos una vez que los datos hayan sido eliminados."
   },
   "CONTACT": "Si tienes preguntas, contáctanos en"
+},
+"ABOUT": {
+  "TITLE": "Sobre Nosotros",
+  "TAGLINE": "Expertos apasionados por transformar espacios con pisos de calidad.",
+  "MISSION": "En Discount Flooring nos especializamos en la instalación de pisos para hogares y negocios, ofreciendo soluciones duraderas y elegantes con materiales premium y ecológicos.",
+  "EXPERIENCE_TITLE": "Años de Experiencia",
+  "EXPERIENCE_DESC": "Con más de 10 años en el sector, hemos instalado más de 100,000 m² de pisos en proyectos residenciales y comerciales, especializándonos en madera, vinilo y alfombra.",
+  "KEY_DIFFERENTIATORS_TITLE": "¿Por qué elegirnos?",
+  "DIFF1": "Instalación rápida y precisa.",
+  "DIFF2": "Cotizaciones transparentes y sin sorpresas.",
+  "DIFF3": "Garantía extendida en todos los trabajos.",
+  "DIFF4": "Atención personalizada desde el primer día.",
+  "TEAM_TITLE": "Nuestro Equipo",
+  "TEAM_DESC": "Contamos con instaladores certificados, con años de experiencia y capacitación especializada en todo tipo de pisos.",
+  "CLIENT_FOCUS_TITLE": "Compromiso con el Cliente",
+  "CLIENT_FOCUS_DESC": "Nos enfocamos en tu satisfacción total, brindando limpieza post-instalación y seguimiento personalizado.",
+  "CTA": "Solicita una Cotización"
 }
 }
